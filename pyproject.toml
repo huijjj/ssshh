@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=80.9.0", "wheel>=0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ssshh"
+version = "0.1.1"
+description = "Simple command line ssh launcher with docker, tmux and VS Code integration."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE.txt"]
+authors = [
+    { name = "Huijong JEONG", email = "huijong.jeong@postch.ac.kr" },
+]
+maintainers = [
+    { name = "Huijong JEONG", email = "huijong.jeong@postech.ac.kr" },
+]
+dependencies = [
+    "InquirerPy",
+    "paramiko",
+    "pexpect",
+    "psutil",
+    "typer",
+]
+
+[project.urls]
+Repository = "https://github.com/huijjj/ssshh"
+
+[project.scripts]
+ssshh = "ssshh.main:app"
